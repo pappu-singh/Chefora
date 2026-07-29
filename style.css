@@ -169,6 +169,7 @@ nav a:hover {
 /* Increase gap between adjacent primary buttons in the hero */
 .hero-content .btn-primary + .btn-primary {
   margin-left: 1.2rem;
+  margin-top: 0.7rem;
 }
 
 /* ---------- SECTION TITLES ---------- */
