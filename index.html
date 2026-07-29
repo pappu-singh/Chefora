@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chefora · Premium Hospitality</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Google Fonts: Playfair Display + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER / NAV ========== -->
+  <header>
+    <div class="container header-flex">
+      <div class="logo">Chefora</div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#booking" class="btn-primary">Book Now</a></li>
+        </ul>
+      </nav>
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <h1>Premium Hospitality <br><span>At Your Doorstep</span></h1>
+      <p class="hero-sub">Experience unparalleled luxury with our curated team of professionals — from private chefs to dedicated house staff.</p>
+      <a href="#booking" class="btn-primary">Book a Service</a>
+      <a href="#booking" class="btn-primary">Expore Services</a>
+    </div>
+    <div class="hero-overlay"></div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="services" id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-sub">Tailored hospitality solutions designed for those who appreciate the finer things in life.</p>
+      <div class="services-grid">
+
+        <!-- Private Chef -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Private Chef</h3>
+          <p>Experience world-class culinary artistry in the comfort of your home. Our chefs craft bespoke menus tailored to your preferences.</p>
+          <button class="btn-book" data-service="Private Chef">Book Now</button>
+        </div>
+
+        <!-- Bartender -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cocktail"></i></div>
+          <h3>Bartender</h3>
+          <p>Elevate your events with expert mixologists who create signature cocktails and provide impeccable bar service.</p>
+          <button class="btn-book" data-service="Bartender">Book Now</button>
+        </div>
+
+        <!-- Cleaner -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-broom"></i></div>
+          <h3>Cleaner</h3>
+          <p>Pristine spaces, every time. Our professional cleaners ensure your home or venue is spotless and welcoming.</p>
+          <button class="btn-book" data-service="Cleaner">Book Now</button>
+        </div>
+
+        <!-- Waiter -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>Waiter</h3>
+          <p>Refined table service for your gatherings. Our waiters bring elegance and attentiveness to every occasion.</p>
+          <button class="btn-book" data-service="Waiter">Book Now</button>
+        </div>
+
+        <!-- House Maid -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-home"></i></div>
+          <h3>House Maid</h3>
+          <p>Dedicated household management with discretion and care. Enjoy a perfectly maintained home, effortlessly.</p>
+          <button class="btn-book" data-service="House Maid">Book Now</button>
+        </div>
+
+        <!-- Singer -->
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-music"></i></div>
+          <h3>Singer</h3>
+          <p>Enhance your events with our talented singers who deliver memorable performances for any occasion.</p>
+          <button class="btn-book" data-service="Singer">Book Now</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BOOKING FORM ========== -->
+  <section class="booking" id="booking">
+    <div class="container">
+      <h2 class="section-title">Book a Service</h2>
+      <p class="section-sub">Fill in the details below and our team will get back to you within 24 hours.</p>
+      <form id="bookingForm" class="booking-form">
+        <div class="form-group">
+          <label for="service">Service *</label>
+          <select id="service" required>
+            <option value="">Select a service…</option>
+            <option value="Private Chef">Private Chef</option>
+            <option value="Bartender">Bartender</option>
+            <option value="Cleaner">Cleaner</option>
+            <option value="Waiter">Waiter</option>
+            <option value="House Maid">House Maid</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" placeholder="e.g. Sophia Laurent" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="hello@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Special Requests</label>
+          <textarea id="message" rows="4" placeholder="Any dietary preferences, date, or extra details…"></textarea>
+        </div>
+        <button type="submit" class="btn-primary btn-full">Send Request</button>
+        <div id="formFeedback" class="form-feedback"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section-title">Client Testimonials</h2>
+      <p class="section-sub">Hear from those who have experienced the Chefora difference.</p>
+      <div class="testimonial-grid">
+
+        <div class="testimonial-card">
+          <p>“Chefora transformed our anniversary dinner into an unforgettable culinary journey. The chef was extraordinary!”</p>
+          <h4>Sophia Laurent</h4>
+          <span>Private Event Host</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p>“The bartender service at our company gala was phenomenal. Every cocktail was a masterpiece.”</p>
+          <h4>James Mitchell</h4>
+          <span>Corporate Client</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p>“Their cleaning team is meticulous. My home has never looked better. Truly premium service.”</p>
+          <h4>Amara Okafor</h4>
+          <span>Homeowner</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p>“The waitstaff were impeccably trained and added such elegance to our client's reception.”</p>
+          <h4>David Chen</h4>
+          <span>Wedding Planner</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p>“Our house maid from Chefora is exceptional. Discreet, thorough, and always anticipates our needs.”</p>
+          <h4>Isabella Rossi</h4>
+          <span>Luxury Villa Owner</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p>“I've hired Chefora for multiple events. Consistently outstanding quality and professionalism.”</p>
+          <h4>Marcus Thompson</h4>
+          <span>Restaurant Owner</span>
+        </div>
+        
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER / DIGITAL CARD ========== -->
+  <footer id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h2>Chefora</h2>
+        <p>Premium Hospitality Services</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p><i class="fas fa-phone-alt"></i> +91 7903649595</p>
+        <p><i class="fas fa-envelope"></i> chefora@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Yeswanthpur, Bangalore</p>
+        <p><i class="far fa-clock"></i> Available 7 days a week, 8AM – 10PM</p>
+      </div>
+      <div class="footer-services">
+        <h3>Services</h3>
+        <ul>
+          <li>Private Chef</li>
+          <li>Bartender</li>
+          <li>Cleaner</li>
+          <li>Waiter</li>
+          <li>House Maid</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Chefora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
