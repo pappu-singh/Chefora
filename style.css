@@ -166,6 +166,11 @@ nav a:hover {
   box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
 }
 
+/* Increase gap between adjacent primary buttons in the hero */
+.hero-content .btn-primary + .btn-primary {
+  margin-left: 1.2rem;
+}
+
 /* ---------- SECTION TITLES ---------- */
 .section-title {
   font-family: var(--font-serif);
